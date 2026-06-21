@@ -7,22 +7,44 @@
     scroll-behavior: smooth;
   }
   body {
-    @apply bg-white text-slate-800 dark:bg-slate-950 dark:text-slate-200 antialiased;
+    @apply bg-space text-slate-200 antialiased;
+  }
+  ::selection {
+    @apply bg-cosmic-500/40 text-white;
   }
 }
 
 @layer components {
   .section-pad {
-    @apply max-w-6xl mx-auto px-6 py-20 md:py-28;
+    @apply max-w-6xl mx-auto px-6 py-24 md:py-32;
   }
   .gradient-text {
-    @apply bg-gradient-to-r from-maroon-500 via-slate-500 to-slate-400 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-electric-400 via-cosmic-400 to-glow-cyan bg-clip-text text-transparent;
   }
   .btn-primary {
-    @apply inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-maroon-600 to-slate-600 px-6 py-3 font-medium text-white shadow-lg shadow-maroon-500/25 transition hover:shadow-xl hover:shadow-slate-500/30 hover:-translate-y-0.5;
+    @apply relative inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-electric-500 to-cosmic-500 px-7 py-3.5 font-medium text-white shadow-glow transition duration-300 hover:shadow-glow-lg hover:-translate-y-0.5;
   }
   .btn-ghost {
-    @apply inline-flex items-center gap-2 rounded-full border border-slate-300 px-6 py-3 font-medium transition hover:border-maroon-500 hover:text-maroon-500 dark:border-slate-700;
+    @apply inline-flex items-center gap-2 rounded-full border border-white/15 px-7 py-3.5 font-medium text-slate-200 backdrop-blur-sm transition duration-300 hover:border-cosmic-400/60 hover:text-cosmic-300 hover:bg-white/5;
+  }
+  .glass-card {
+    @apply rounded-2xl border border-white/10 bg-white/[0.03] backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.4)];
+  }
+  .glow-border {
+    @apply relative;
+  }
+  .glow-border::before {
+    content: '';
+    @apply absolute -inset-px rounded-2xl bg-gradient-to-r from-electric-500/40 via-cosmic-500/40 to-glow-cyan/40 opacity-0 transition-opacity duration-500 -z-10 blur;
+  }
+  .glow-border:hover::before {
+    @apply opacity-100;
+  }
+  .section-heading {
+    @apply font-display text-3xl md:text-5xl font-bold text-center text-white;
+  }
+  .section-divider {
+    @apply mx-auto mt-5 h-1 w-20 rounded-full bg-gradient-to-r from-electric-500 via-cosmic-500 to-glow-cyan;
   }
 }
 
@@ -31,8 +53,8 @@
   width: 10px;
 }
 ::-webkit-scrollbar-track {
-  @apply bg-transparent;
+  @apply bg-space;
 }
 ::-webkit-scrollbar-thumb {
-  @apply bg-maroon-300/50 rounded-full;
+  @apply bg-cosmic-500/50 rounded-full;
 }

@@ -1,57 +1,61 @@
 import { motion } from 'framer-motion'
-import { profile } from '../data'
+import { profile, roles } from '../data'
 import TypewriterText from './TypewriterText'
-
-const roles = ['Designer', 'Creative Thinker', 'UI/UX Artist', 'Brand Builder', 'AI Creator']
+import MagneticButton from './MagneticButton'
 
 export default function Hero() {
   return (
-    <section id="home" className="relative min-h-screen flex items-center section-pad pt-28">
+    <section id="home" className="relative min-h-screen flex items-center section-pad pt-28 overflow-hidden">
       <div className="grid md:grid-cols-2 gap-12 items-center w-full">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
         >
-          <p className="inline-flex items-center gap-2 rounded-full border border-maroon-300/50 dark:border-maroon-700/50 px-4 py-1.5 text-sm text-maroon-600 dark:text-maroon-300 mb-6">
-            <span className="h-2 w-2 rounded-full bg-green-500 animate-pulse" />
-            Available for freelance work
+          <p className="inline-flex items-center gap-2 rounded-full border border-cosmic-400/30 bg-white/[0.03] px-4 py-1.5 text-sm text-cosmic-300 mb-6 backdrop-blur-sm">
+            <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
+            Open to AI & Full Stack opportunities
           </p>
-          <h1 className="font-display text-4xl md:text-6xl font-bold leading-tight">
-            Hi, I'm <span className="gradient-text">{profile.name}</span>
-          </h1>
-          <h2 className="mt-3 text-2xl md:text-3xl font-semibold text-slate-600 dark:text-slate-400">
+
+          <h2 className="text-lg md:text-xl font-medium text-slate-400 mb-3">
             I'm a{' '}
-            <TypewriterText words={roles} className="gradient-text font-bold" />
+            <TypewriterText words={roles} className="text-cosmic-300 font-semibold" />
           </h2>
-          <p className="mt-6 text-lg text-slate-600 dark:text-slate-400 max-w-md">
+
+          <h1 className="font-display text-4xl md:text-6xl font-bold leading-[1.1] text-white">
+            {profile.headline}
+          </h1>
+
+          <p className="mt-6 text-lg text-slate-400 max-w-md">
             {profile.tagline}
           </p>
-          <div className="mt-8 flex flex-wrap gap-4">
-            <a href="#work" className="btn-primary">View My Work →</a>
-            <a href="#contact" className="btn-ghost">Let's Talk</a>
+
+          <div className="mt-9 flex flex-wrap gap-4">
+            <MagneticButton href="#work" className="btn-primary">
+              View My Work →
+            </MagneticButton>
+            <MagneticButton href="#contact" className="btn-ghost">
+              Let's Talk
+            </MagneticButton>
           </div>
         </motion.div>
 
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.7, delay: 0.2 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
           className="relative flex justify-center"
         >
           <div className="relative h-72 w-72 md:h-96 md:w-96 animate-float">
-            {/* rotating dashed ring */}
-            <div className="absolute -inset-6 rounded-full border-2 border-dashed border-maroon-300/40 animate-spin-slow" />
-            <div className="absolute inset-0 rounded-[2.5rem] bg-gradient-to-br from-maroon-500 via-slate-500 to-slate-400 rotate-6 animate-gradient bg-[length:200%_200%]" />
-            <div className="absolute inset-0 rounded-[2.5rem] bg-gradient-to-br from-maroon-600 to-slate-500 -rotate-6 opacity-60 blur-sm" />
-            <div className="absolute inset-2 rounded-[2.2rem] bg-white/10 backdrop-blur-sm flex items-center justify-center text-8xl">
-              🎨
+            <div className="absolute -inset-10 rounded-full bg-gradient-to-br from-electric-500/20 via-cosmic-500/20 to-glow-cyan/10 blur-3xl animate-gradient bg-[length:200%_200%]" />
+            <div className="absolute -inset-6 rounded-full border border-dashed border-cosmic-400/30 animate-spin-slow" />
+            <div className="absolute inset-2 rounded-[2.2rem] glass-card flex items-center justify-center text-7xl shadow-glow">
+              🧠
             </div>
-            {/* orbiting badges */}
             <div className="absolute inset-0 animate-spin-slow">
               <span className="absolute -top-4 left-1/2 -translate-x-1/2 text-2xl">✨</span>
-              <span className="absolute top-1/2 -right-4 -translate-y-1/2 text-2xl">🖌️</span>
-              <span className="absolute -bottom-4 left-1/2 -translate-x-1/2 text-2xl">💡</span>
+              <span className="absolute top-1/2 -right-4 -translate-y-1/2 text-2xl">⚡</span>
+              <span className="absolute -bottom-4 left-1/2 -translate-x-1/2 text-2xl">💻</span>
             </div>
           </div>
         </motion.div>

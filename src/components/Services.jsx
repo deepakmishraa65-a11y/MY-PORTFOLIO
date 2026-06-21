@@ -4,10 +4,10 @@ import { services } from '../data'
 export default function Services() {
   return (
     <section id="services" className="section-pad">
-      <h2 className="font-display text-3xl md:text-4xl font-bold text-center">
+      <h2 className="section-heading">
         What I <span className="gradient-text">Do</span>
       </h2>
-      <div className="mx-auto mt-4 h-1 w-20 rounded-full bg-gradient-to-r from-maroon-500 to-slate-400" />
+      <div className="section-divider" />
 
       <div className="mt-12 grid md:grid-cols-3 gap-6">
         {services.map((s, i) => (
@@ -17,11 +17,11 @@ export default function Services() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: i * 0.1 }}
-            className="group rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/50 dark:bg-slate-900/40 p-8 hover:border-maroon-500 hover:-translate-y-1 transition"
+            className="glass-card glow-border group p-8 hover:-translate-y-1 transition-transform"
           >
             <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">{s.icon}</div>
-            <h3 className="text-xl font-semibold">{s.title}</h3>
-            <p className="mt-3 text-slate-600 dark:text-slate-400">{s.desc}</p>
+            <h3 className="text-xl font-semibold text-white">{s.title}</h3>
+            <p className="mt-3 text-slate-400">{s.desc}</p>
           </motion.div>
         ))}
       </div>

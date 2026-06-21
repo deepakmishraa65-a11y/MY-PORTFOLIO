@@ -5,102 +5,158 @@
 
 export const profile = {
   name: 'Deepak Mishra',
-  role: 'Designer & Creative',
-  tagline: 'I craft clean, bold visuals and digital experiences that tell a story.',
+  role: 'AI Engineer & Full Stack Developer',
+  headline: 'Building AI that solves real-world problems.',
+  tagline:
+    'I design and ship intelligent products — from AI-powered platforms to full-stack systems — for startups and businesses that want to move fast.',
   location: 'India',
   email: 'deepakmishraa65@gmail.com',
   resumeUrl: '#', // अपनी resume PDF का link यहाँ डालें
   socials: {
-    instagram: 'https://instagram.com/',
-    behance: 'https://behance.net/',
-    dribbble: 'https://dribbble.com/',
-    linkedin: 'https://linkedin.com/',
     github: 'https://github.com/deepakmishraa65-a11y',
+    linkedin: 'https://linkedin.com/',
+    twitter: 'https://twitter.com/',
+    instagram: 'https://instagram.com/',
   },
 }
+
+export const roles = [
+  'AI Engineer',
+  'Full Stack Developer',
+  'Entrepreneur',
+  'Product Builder',
+]
 
 export const about = {
   heading: 'About Me',
   paragraphs: [
-    "I'm a creative designer passionate about turning ideas into striking visual stories. From branding to digital art, I love blending color, type, and motion to create work that feels alive.",
-    'With a keen eye for detail and a love for clean aesthetics, I help brands and people stand out. When I\'m not designing, you\'ll find me exploring new trends, experimenting with AI tools, and sketching new concepts.',
+    "I'm an AI Engineer and Full Stack Developer obsessed with turning hard, messy problems into clean, intelligent products. I work across the entire stack — from training and integrating ML models to shipping production-ready frontends and APIs.",
+    "I've built and shipped AI-driven platforms across hiring, mental wellness, and enterprise operations — always with one philosophy: technology should remove friction, not add to it. When I'm not coding, I'm prototyping the next idea that could become a company.",
   ],
+  philosophy: 'Ship fast. Solve real problems. Let the product speak.',
   stats: [
-    { label: 'Projects Done', value: '50+' },
-    { label: 'Happy Clients', value: '30+' },
-    { label: 'Years Experience', value: '3+' },
+    { label: 'Projects Shipped', value: '15+' },
+    { label: 'AI Models Integrated', value: '20+' },
+    { label: 'Years Building', value: '3+' },
   ],
 }
 
-export const skills = [
-  { name: 'Branding & Identity', level: 90 },
-  { name: 'UI / UX Design', level: 85 },
-  { name: 'Illustration', level: 80 },
-  { name: 'Motion & Animation', level: 75 },
-  { name: 'Photoshop / Figma', level: 92 },
-  { name: 'AI Creative Tools', level: 88 },
-]
+// Categorized tech stack
+export const techStack = {
+  Frontend: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion'],
+  Backend: ['Node.js', 'Express', 'Python', 'FastAPI', 'REST APIs'],
+  'AI / ML': ['OpenAI / LLMs', 'LangChain', 'TensorFlow', 'PyTorch', 'Prompt Engineering'],
+  Databases: ['MongoDB', 'PostgreSQL', 'Redis', 'Supabase'],
+  DevOps: ['Docker', 'GitHub Actions', 'CI/CD', 'Nginx'],
+  Cloud: ['AWS', 'Vercel', 'Google Cloud', 'Cloudflare'],
+}
 
-// Projects — image: किसी भी image URL या /public में रखी image का path दें
+// Featured projects — रियल details src/data.js में update कर सकते हो
 export const projects = [
   {
-    title: 'HireAI — Smart Hiring Platform',
+    title: 'HireAI',
+    tagline: 'AI-powered hiring & candidate matching platform',
     category: 'AI / Web App',
-    image: 'https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&q=80',
-    link: '#', // यहाँ अपना HireAI project का live link या GitHub repo डालें
+    image: 'https://images.unsplash.com/photo-1551434678-e076c223a692?w=900&q=80',
+    tech: ['Next.js', 'OpenAI API', 'PostgreSQL', 'Tailwind CSS'],
+    problem:
+      'Recruiters waste hours manually screening resumes and miss strong candidates buried under volume.',
+    impact:
+      'Automated resume screening and AI-driven candidate ranking cut shortlisting time by over 70% for early users.',
+    demoUrl: '#',
+    githubUrl: '#',
   },
   {
-    title: 'Brand Identity — Lumen',
-    category: 'Branding',
-    image: 'https://images.unsplash.com/photo-1626785774573-4b799315345d?w=800&q=80',
-    link: '#',
+    title: 'MindSync',
+    tagline: 'AI mental wellness companion with mood intelligence',
+    category: 'AI / Mobile',
+    image: 'https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=900&q=80',
+    tech: ['React Native', 'Node.js', 'LLM', 'MongoDB'],
+    problem:
+      'People struggle to track and understand their emotional patterns without a judgment-free, always-available tool.',
+    impact:
+      'Delivers personalized, AI-guided check-ins and mood insights, helping users build consistent self-reflection habits.',
+    demoUrl: '#',
+    githubUrl: '#',
   },
   {
-    title: 'Mobile App UI — Flow',
-    category: 'UI/UX',
-    image: 'https://images.unsplash.com/photo-1559028012-481c04fa702d?w=800&q=80',
-    link: '#',
-  },
-  {
-    title: 'Poster Series — Neon Nights',
-    category: 'Illustration',
-    image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&q=80',
-    link: '#',
-  },
-  {
-    title: 'Packaging — Bloom Co.',
-    category: 'Branding',
-    image: 'https://images.unsplash.com/photo-1620207418302-439b387441b0?w=800&q=80',
-    link: '#',
-  },
-  {
-    title: 'Web Design — Studio Aura',
-    category: 'UI/UX',
-    image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&q=80',
-    link: '#',
-  },
-  {
-    title: 'Motion Reel — Pulse',
-    category: 'Motion',
-    image: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800&q=80',
-    link: '#',
+    title: 'Textile ERP',
+    tagline: 'End-to-end enterprise resource planning for textile manufacturing',
+    category: 'Enterprise / Web App',
+    image: 'https://images.unsplash.com/photo-1565084888279-aca607ecce0c?w=900&q=80',
+    tech: ['React', 'Express', 'MySQL', 'Docker'],
+    problem:
+      'Textile manufacturers managed inventory, orders, and production on disconnected spreadsheets, causing costly errors.',
+    impact:
+      'Unified inventory, production tracking, and billing into one system — reducing manual reconciliation work by 60%.',
+    demoUrl: '#',
+    githubUrl: '#',
   },
 ]
 
 export const services = [
   {
-    icon: '🎨',
-    title: 'Brand Design',
-    desc: 'Logos, identity systems & guidelines that make brands memorable.',
+    icon: '🤖',
+    title: 'AI Product Development',
+    desc: 'LLM integrations, intelligent automation, and AI-first features that ship to production.',
   },
   {
-    icon: '📱',
-    title: 'UI / UX Design',
-    desc: 'Beautiful, intuitive interfaces for web and mobile apps.',
+    icon: '🧱',
+    title: 'Full Stack Engineering',
+    desc: 'Robust, scalable web apps — from database design to polished, animated frontends.',
   },
   {
-    icon: '✨',
-    title: 'Creative & AI Art',
-    desc: 'Illustrations, posters and AI-powered visuals for any project.',
+    icon: '🚀',
+    title: 'Startup MVPs',
+    desc: 'Fast, focused builds that help founders validate ideas and ship to real users quickly.',
+  },
+]
+
+export const experience = [
+  {
+    year: '2024 — Present',
+    title: 'Founder & AI Engineer',
+    org: 'Independent / Building HireAI & MindSync',
+    desc: 'Designing and building AI-native products end-to-end, from model integration to UI.',
+  },
+  {
+    year: '2023 — 2024',
+    title: 'Full Stack Developer',
+    org: 'Freelance / Client Projects',
+    desc: 'Delivered full stack web applications and enterprise tools, including the Textile ERP system.',
+  },
+  {
+    year: '2022 — 2023',
+    title: 'Started Learning AI & Web Development',
+    org: 'Self-Taught / Online Courses',
+    desc: 'Built foundational skills in JavaScript, React, Python, and machine learning fundamentals.',
+  },
+]
+
+export const achievements = [
+  { label: 'Projects Shipped', value: '15+' },
+  { label: 'Happy Clients', value: '10+' },
+  { label: 'AI Models Used', value: '20+' },
+  { label: 'Lines of Code', value: '100K+' },
+]
+
+export const testimonials = [
+  {
+    quote:
+      "Deepak doesn't just write code — he understands the problem first. HireAI's matching logic alone saved us weeks of manual screening.",
+    name: 'Early Pilot Partner',
+    role: 'HiringOps Lead',
+  },
+  {
+    quote:
+      'The Textile ERP system he built replaced three different spreadsheets we were juggling. Rollout was smooth and support was excellent.',
+    name: 'Operations Manager',
+    role: 'Textile Manufacturing Client',
+  },
+  {
+    quote:
+      "MindSync feels genuinely thoughtful — not like a generic chatbot wrapper. You can tell real care went into the AI behavior.",
+    name: 'Beta User',
+    role: 'MindSync Community',
   },
 ]

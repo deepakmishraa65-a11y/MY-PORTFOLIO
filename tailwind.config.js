@@ -8,23 +8,39 @@ export default {
   theme: {
     extend: {
       colors: {
-        accent: {
-          DEFAULT: '#7f1d1d',
-          light: '#991b1b',
+        space: {
+          DEFAULT: '#050816',
+          100: '#0a0f24',
+          200: '#0d1330',
+          300: '#11173d',
         },
-        maroon: {
-          50: '#fdf2f2',
-          100: '#fbe4e4',
-          300: '#c97a7a',
-          500: '#7f1d1d',
-          600: '#6b1717',
-          700: '#561212',
-          900: '#3a0d0d',
+        electric: {
+          300: '#93c5fd',
+          400: '#60a5fa',
+          500: '#3b82f6',
+          600: '#2563eb',
+        },
+        cosmic: {
+          300: '#c4b5fd',
+          400: '#a78bfa',
+          500: '#8b5cf6',
+          600: '#7c3aed',
+        },
+        glow: {
+          cyan: '#22d3ee',
         },
       },
       fontFamily: {
-        sans: ['Poppins', 'system-ui', 'sans-serif'],
+        sans: ['Inter', 'system-ui', 'sans-serif'],
         display: ['"Space Grotesk"', 'sans-serif'],
+      },
+      boxShadow: {
+        glow: '0 0 40px -10px rgba(139, 92, 246, 0.45)',
+        'glow-cyan': '0 0 40px -10px rgba(34, 211, 238, 0.4)',
+        'glow-lg': '0 0 80px -20px rgba(59, 130, 246, 0.5)',
+      },
+      backdropBlur: {
+        xs: '2px',
       },
       keyframes: {
         float: {
@@ -47,13 +63,18 @@ export default {
         'spin-slow': {
           to: { transform: 'rotate(360deg)' },
         },
+        twinkle: {
+          '0%, 100%': { opacity: 0.2 },
+          '50%': { opacity: 1 },
+        },
       },
       animation: {
         float: 'float 6s ease-in-out infinite',
         gradient: 'gradient 8s ease infinite',
-        marquee: 'marquee 22s linear infinite',
-        blob: 'blob 14s ease-in-out infinite',
-        'spin-slow': 'spin-slow 18s linear infinite',
+        marquee: 'marquee 26s linear infinite',
+        blob: 'blob 16s ease-in-out infinite',
+        'spin-slow': 'spin-slow 20s linear infinite',
+        twinkle: 'twinkle 3s ease-in-out infinite',
       },
     },
   },
