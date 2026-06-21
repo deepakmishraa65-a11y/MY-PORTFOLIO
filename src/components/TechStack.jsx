@@ -2,12 +2,13 @@ import { motion } from 'framer-motion'
 import { useSiteData } from '../context/SiteDataContext'
 
 const icons = {
+  'Data & Analytics': '📊',
   Frontend: '🎨',
   Backend: '⚙️',
-  'AI / ML': '🤖',
   Databases: '🗄️',
   DevOps: '🔁',
   Cloud: '☁️',
+  'AI / ML': '🤖',
 }
 
 export default function TechStack() {

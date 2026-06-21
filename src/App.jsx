@@ -11,7 +11,6 @@ import Services from './components/Services'
 import Projects from './components/Projects'
 import Experience from './components/Experience'
 import Achievements from './components/Achievements'
-import Testimonials from './components/Testimonials'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import AdminDashboard from './components/admin/AdminDashboard'
@@ -60,18 +59,17 @@ export default function App() {
 
       <CursorGlow />
       <ScrollProgress />
+      <ColorPicker />
       <Navbar />
       <main>
         <Hero />
         <Marquee />
         <About />
         <TechStack />
-        <ColorPicker />
         <Services />
         <Projects />
         <Experience />
         <Achievements />
-        <Testimonials />
         <Contact />
       </main>
       <Footer />

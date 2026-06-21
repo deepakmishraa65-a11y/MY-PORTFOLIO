@@ -12,7 +12,6 @@ const TABS = [
   'Services',
   'Experience',
   'Achievements',
-  'Testimonials',
 ]
 
 function Field({ label, value, onChange, textarea }) {
@@ -281,24 +280,6 @@ function AchievementsTab({ data, updateData }) {
   )
 }
 
-function TestimonialsTab({ data, updateData }) {
-  return (
-    <ListEditor
-      items={data.testimonials}
-      emptyItem={{ quote: '', name: '', role: '' }}
-      addLabel="Add Testimonial"
-      onChange={(items) => updateData('testimonials', items)}
-      renderFields={(item, update) => (
-        <>
-          <Field label="Quote" value={item.quote} onChange={(v) => update({ ...item, quote: v })} textarea />
-          <Field label="Name" value={item.name} onChange={(v) => update({ ...item, name: v })} />
-          <Field label="Role" value={item.role} onChange={(v) => update({ ...item, role: v })} />
-        </>
-      )}
-    />
-  )
-}
-
 function Login({ onSuccess }) {
   const [pw, setPw] = useState('')
   const [error, setError] = useState('')
@@ -402,7 +383,6 @@ export default function AdminDashboard() {
         {tab === 'Services' && <ServicesTab {...tabProps} />}
         {tab === 'Experience' && <ExperienceTab {...tabProps} />}
         {tab === 'Achievements' && <AchievementsTab {...tabProps} />}
-        {tab === 'Testimonials' && <TestimonialsTab {...tabProps} />}
       </div>
     </div>
   )

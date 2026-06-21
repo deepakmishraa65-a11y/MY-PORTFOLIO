@@ -59,24 +59,47 @@ export default function Projects() {
                 </p>
               </div>
 
-              <div className="mt-6 flex gap-3">
-                <a
-                  href={p.demoUrl}
-                  target={p.demoUrl !== '#' ? '_blank' : undefined}
-                  rel="noreferrer"
-                  className="flex-1 text-center rounded-full bg-gradient-to-r from-[rgb(var(--c2-rgb))] to-[rgb(var(--c1-rgb))] px-4 py-2 text-sm font-medium text-white hover:shadow-glow transition"
-                >
-                  Live Demo
-                </a>
-                <a
-                  href={p.githubUrl}
-                  target={p.githubUrl !== '#' ? '_blank' : undefined}
-                  rel="noreferrer"
-                  className="flex-1 text-center rounded-full border border-white/15 px-4 py-2 text-sm font-medium text-slate-200 hover:border-[rgb(var(--c1-rgb)/0.60)] hover:text-[rgb(var(--c1-rgb))] transition"
-                >
-                  GitHub
-                </a>
-              </div>
+              {p.demoUrl === '#' && p.githubUrl === '#' ? (
+                <div className="mt-6">
+                  <span
+                    title="Case study and links coming soon"
+                    className="block text-center rounded-full border border-white/10 px-4 py-2 text-sm font-medium text-slate-500 cursor-not-allowed"
+                  >
+                    Case study coming soon
+                  </span>
+                </div>
+              ) : (
+                <div className="mt-6 flex gap-3">
+                  {p.demoUrl === '#' ? (
+                    <span className="flex-1 text-center rounded-full border border-white/10 px-4 py-2 text-sm font-medium text-slate-500 cursor-not-allowed">
+                      Demo soon
+                    </span>
+                  ) : (
+                    <a
+                      href={p.demoUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="flex-1 text-center rounded-full bg-gradient-to-r from-[rgb(var(--c2-rgb))] to-[rgb(var(--c1-rgb))] px-4 py-2 text-sm font-medium text-white hover:shadow-glow transition"
+                    >
+                      Live Demo
+                    </a>
+                  )}
+                  {p.githubUrl === '#' ? (
+                    <span className="flex-1 text-center rounded-full border border-white/10 px-4 py-2 text-sm font-medium text-slate-500 cursor-not-allowed">
+                      GitHub soon
+                    </span>
+                  ) : (
+                    <a
+                      href={p.githubUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="flex-1 text-center rounded-full border border-white/15 px-4 py-2 text-sm font-medium text-slate-200 hover:border-[rgb(var(--c1-rgb)/0.60)] hover:text-[rgb(var(--c1-rgb))] transition"
+                    >
+                      GitHub
+                    </a>
+                  )}
+                </div>
+              )}
             </div>
           </motion.div>
         ))}

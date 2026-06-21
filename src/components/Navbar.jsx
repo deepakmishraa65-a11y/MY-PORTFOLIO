@@ -5,7 +5,6 @@ const links = [
   { href: '#home', label: 'Home' },
   { href: '#about', label: 'About' },
   { href: '#stack', label: 'Stack' },
-  { href: '#theme', label: 'Theme' },
   { href: '#work', label: 'Work' },
   { href: '#experience', label: 'Experience' },
   { href: '#contact', label: 'Contact' },
@@ -33,12 +32,23 @@ export default function Navbar() {
         </ul>
 
         <div className="flex items-center gap-3">
-          <a
-            href={profile.resumeUrl}
-            className="hidden sm:inline-flex items-center rounded-full border border-white/15 px-4 py-1.5 text-sm font-medium text-slate-200 hover:border-[rgb(var(--c1-rgb)/0.60)] hover:text-[rgb(var(--c1-rgb))] transition"
-          >
-            Resume
-          </a>
+          {profile.resumeUrl === '#' ? (
+            <span
+              title="Resume coming soon"
+              className="hidden sm:inline-flex items-center rounded-full border border-white/10 px-4 py-1.5 text-sm font-medium text-slate-500 cursor-not-allowed"
+            >
+              Resume — soon
+            </span>
+          ) : (
+            <a
+              href={profile.resumeUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="hidden sm:inline-flex items-center rounded-full border border-white/15 px-4 py-1.5 text-sm font-medium text-slate-200 hover:border-[rgb(var(--c1-rgb)/0.60)] hover:text-[rgb(var(--c1-rgb))] transition"
+            >
+              Resume
+            </a>
+          )}
           <button
             onClick={() => setOpen(!open)}
             aria-label="Menu"

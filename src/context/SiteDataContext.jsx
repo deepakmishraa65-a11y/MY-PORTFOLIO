@@ -8,10 +8,12 @@ import {
   services,
   experience,
   achievements,
-  testimonials,
 } from '../data'
 
 const STORAGE_KEY = 'portfolio-site-data'
+// Bump this whenever the content/copy in data.js changes meaningfully, so
+// stale localStorage edits from before the change don't silently override it.
+const DATA_VERSION = 2
 
 const defaultData = {
   profile,
@@ -22,13 +24,15 @@ const defaultData = {
   services,
   experience,
   achievements,
-  testimonials,
 }
 
 function loadInitialData() {
   try {
     const saved = localStorage.getItem(STORAGE_KEY)
-    return saved ? { ...defaultData, ...JSON.parse(saved) } : defaultData
+    if (!saved) return defaultData
+    const parsed = JSON.parse(saved)
+    if (parsed.__version !== DATA_VERSION) return defaultData
+    return { ...defaultData, ...parsed.data }
   } catch {
     return defaultData
   }
@@ -42,7 +46,7 @@ export function SiteDataProvider({ children }) {
   const updateData = (key, value) => {
     setData((prev) => {
       const next = { ...prev, [key]: value }
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(next))
+      localStorage.setItem(STORAGE_KEY, JSON.stringify({ __version: DATA_VERSION, data: next }))
       return next
     })
   }

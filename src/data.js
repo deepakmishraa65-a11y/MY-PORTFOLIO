@@ -5,50 +5,49 @@
 
 export const profile = {
   name: 'Deepak Mishra',
-  role: 'AI Engineer & Full Stack Developer',
-  headline: 'Building AI that solves real-world problems.',
+  role: 'Data Analyst & Software Developer',
+  headline: 'Finding the story in data. Building the software that tells it.',
   tagline:
-    'I design and ship intelligent products — from AI-powered platforms to full-stack systems — for startups and businesses that want to move fast.',
+    'I analyze data to find what actually matters, then build the software and dashboards that put those insights to work — for businesses that want clear answers, not just charts.',
   location: 'India',
   email: 'deepakmishraa65@gmail.com',
   resumeUrl: '#', // अपनी resume PDF का link यहाँ डालें
   socials: {
     github: 'https://github.com/deepakmishraa65-a11y',
-    linkedin: 'https://linkedin.com/',
-    twitter: 'https://twitter.com/',
-    instagram: 'https://instagram.com/',
+    // real linkedin handle yahan add karo jab ready ho:
+    // linkedin: 'https://linkedin.com/in/your-handle',
   },
 }
 
 export const roles = [
-  'AI Engineer',
-  'Full Stack Developer',
-  'Entrepreneur',
-  'Product Builder',
+  'Data Analyst',
+  'Software Developer',
+  'Problem Solver',
 ]
 
 export const about = {
   heading: 'About Me',
   paragraphs: [
-    "I'm an AI Engineer and Full Stack Developer obsessed with turning hard, messy problems into clean, intelligent products. I work across the entire stack — from training and integrating ML models to shipping production-ready frontends and APIs.",
-    "I've built and shipped AI-driven platforms across hiring, mental wellness, and enterprise operations — always with one philosophy: technology should remove friction, not add to it. When I'm not coding, I'm prototyping the next idea that could become a company.",
+    "I'm a Data Analyst and Software Developer who likes getting to the bottom of messy data before writing a single line of UI code. I work across the stack — querying and cleaning data, building the analysis, and then shipping the dashboards and applications that act on it.",
+    "I've built systems across hiring, wellness, and enterprise operations — always starting from the same question: what does the data actually say, and what should we build because of it? When I'm not analyzing something, I'm building the tool that makes the next analysis easier.",
   ],
   philosophy: 'Ship fast. Solve real problems. Let the product speak.',
   stats: [
     { label: 'Projects Shipped', value: '15+' },
-    { label: 'AI Models Integrated', value: '20+' },
     { label: 'Years Building', value: '3+' },
+    { label: 'Dashboards & Tools', value: '10+' },
   ],
 }
 
 // Categorized tech stack
 export const techStack = {
+  'Data & Analytics': ['SQL', 'Excel / Power BI', 'Python (Pandas, NumPy)', 'Jupyter', 'Data Visualization'],
   Frontend: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion'],
   Backend: ['Node.js', 'Express', 'Python', 'FastAPI', 'REST APIs'],
-  'AI / ML': ['OpenAI / LLMs', 'LangChain', 'TensorFlow', 'PyTorch', 'Prompt Engineering'],
   Databases: ['MongoDB', 'PostgreSQL', 'Redis', 'Supabase'],
   DevOps: ['Docker', 'GitHub Actions', 'CI/CD', 'Nginx'],
   Cloud: ['AWS', 'Vercel', 'Google Cloud', 'Cloudflare'],
+  'AI / ML': ['OpenAI / LLMs', 'LangChain', 'Prompt Engineering'],
 }
 
 // Featured projects — रियल details src/data.js में update कर सकते हो
@@ -140,23 +139,3 @@ export const achievements = [
   { label: 'Lines of Code', value: '100K+' },
 ]
 
-export const testimonials = [
-  {
-    quote:
-      "Deepak doesn't just write code — he understands the problem first. HireAI's matching logic alone saved us weeks of manual screening.",
-    name: 'Early Pilot Partner',
-    role: 'HiringOps Lead',
-  },
-  {
-    quote:
-      'The Textile ERP system he built replaced three different spreadsheets we were juggling. Rollout was smooth and support was excellent.',
-    name: 'Operations Manager',
-    role: 'Textile Manufacturing Client',
-  },
-  {
-    quote:
-      "MindSync feels genuinely thoughtful — not like a generic chatbot wrapper. You can tell real care went into the AI behavior.",
-    name: 'Beta User',
-    role: 'MindSync Community',
-  },
-]
