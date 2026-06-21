@@ -1,9 +1,11 @@
 import { motion } from 'framer-motion'
-import { profile, roles } from '../data'
+import { useSiteData } from '../context/SiteDataContext'
 import TypewriterText from './TypewriterText'
 import MagneticButton from './MagneticButton'
 
 export default function Hero() {
+  const { data } = useSiteData()
+  const { profile, roles } = data
   return (
     <section id="home" className="relative min-h-screen flex items-center section-pad pt-28 overflow-hidden">
       <div className="grid md:grid-cols-2 gap-12 items-center w-full">

@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion'
-import { achievements } from '../data'
+import { useSiteData } from '../context/SiteDataContext'
 
 export default function Achievements() {
+  const { achievements } = useSiteData().data
   return (
     <section id="achievements" className="section-pad">
       <h2 className="section-heading">

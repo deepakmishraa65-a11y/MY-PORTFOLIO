@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion'
-import { about } from '../data'
+import { useSiteData } from '../context/SiteDataContext'
 
 export default function About() {
+  const { about } = useSiteData().data
   return (
     <section id="about" className="section-pad">
       <motion.div

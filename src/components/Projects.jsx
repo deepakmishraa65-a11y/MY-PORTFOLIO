@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion'
-import { projects } from '../data'
+import { useSiteData } from '../context/SiteDataContext'
 
 export default function Projects() {
+  const { projects } = useSiteData().data
   return (
     <section id="work" className="section-pad">
       <h2 className="section-heading">

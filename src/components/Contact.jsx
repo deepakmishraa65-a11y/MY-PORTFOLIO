@@ -1,8 +1,9 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { profile } from '../data'
+import { useSiteData } from '../context/SiteDataContext'
 
 export default function Contact() {
+  const { profile } = useSiteData().data
   const [form, setForm] = useState({ name: '', email: '', message: '' })
 
   const handleSubmit = (e) => {

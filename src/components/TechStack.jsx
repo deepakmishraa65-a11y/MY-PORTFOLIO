@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { techStack } from '../data'
+import { useSiteData } from '../context/SiteDataContext'
 
 const icons = {
   Frontend: '🎨',
@@ -11,6 +11,7 @@ const icons = {
 }
 
 export default function TechStack() {
+  const { techStack } = useSiteData().data
   return (
     <section id="stack" className="section-pad">
       <h2 className="section-heading">

@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion'
-import { testimonials } from '../data'
+import { useSiteData } from '../context/SiteDataContext'
 
 export default function Testimonials() {
+  const { testimonials } = useSiteData().data
   return (
     <section id="testimonials" className="section-pad">
       <h2 className="section-heading">

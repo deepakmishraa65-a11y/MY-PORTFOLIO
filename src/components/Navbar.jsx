@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { profile } from '../data'
+import { useSiteData } from '../context/SiteDataContext'
 
 const links = [
   { href: '#home', label: 'Home' },
@@ -12,6 +12,7 @@ const links = [
 ]
 
 export default function Navbar() {
+  const { profile } = useSiteData().data
   const [open, setOpen] = useState(false)
 
   return (
