@@ -9,7 +9,7 @@ export default function Contact() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="rounded-3xl border border-slate-200 dark:border-slate-800 bg-gradient-to-br from-violet-500/10 to-pink-500/10 p-10 md:p-16 text-center"
+        className="rounded-3xl border border-slate-200 dark:border-slate-800 bg-gradient-to-br from-maroon-500/10 to-slate-400/10 p-10 md:p-16 text-center"
       >
         <h2 className="font-display text-3xl md:text-4xl font-bold">
           Let's create something <span className="gradient-text">amazing</span>
@@ -29,7 +29,7 @@ export default function Contact() {
               href={url}
               target="_blank"
               rel="noreferrer"
-              className="rounded-full border border-slate-300 dark:border-slate-700 px-5 py-2 capitalize hover:border-violet-500 hover:text-violet-500 transition"
+              className="rounded-full border border-slate-300 dark:border-slate-700 px-5 py-2 capitalize hover:border-maroon-500 hover:text-maroon-500 transition"
             >
               {name}
             </a>

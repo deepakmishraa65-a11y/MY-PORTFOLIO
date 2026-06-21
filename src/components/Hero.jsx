@@ -13,7 +13,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
         >
-          <p className="inline-flex items-center gap-2 rounded-full border border-violet-300/50 dark:border-violet-700/50 px-4 py-1.5 text-sm text-violet-600 dark:text-violet-300 mb-6">
+          <p className="inline-flex items-center gap-2 rounded-full border border-maroon-300/50 dark:border-maroon-700/50 px-4 py-1.5 text-sm text-maroon-600 dark:text-maroon-300 mb-6">
             <span className="h-2 w-2 rounded-full bg-green-500 animate-pulse" />
             Available for freelance work
           </p>
@@ -41,9 +41,9 @@ export default function Hero() {
         >
           <div className="relative h-72 w-72 md:h-96 md:w-96 animate-float">
             {/* rotating dashed ring */}
-            <div className="absolute -inset-6 rounded-full border-2 border-dashed border-violet-400/40 animate-spin-slow" />
-            <div className="absolute inset-0 rounded-[2.5rem] bg-gradient-to-br from-violet-500 via-fuchsia-500 to-pink-500 rotate-6 animate-gradient bg-[length:200%_200%]" />
-            <div className="absolute inset-0 rounded-[2.5rem] bg-gradient-to-br from-violet-600 to-pink-600 -rotate-6 opacity-60 blur-sm" />
+            <div className="absolute -inset-6 rounded-full border-2 border-dashed border-maroon-300/40 animate-spin-slow" />
+            <div className="absolute inset-0 rounded-[2.5rem] bg-gradient-to-br from-maroon-500 via-slate-500 to-slate-400 rotate-6 animate-gradient bg-[length:200%_200%]" />
+            <div className="absolute inset-0 rounded-[2.5rem] bg-gradient-to-br from-maroon-600 to-slate-500 -rotate-6 opacity-60 blur-sm" />
             <div className="absolute inset-2 rounded-[2.2rem] bg-white/10 backdrop-blur-sm flex items-center justify-center text-8xl">
               🎨
             </div>

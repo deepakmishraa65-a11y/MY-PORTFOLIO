@@ -22,7 +22,7 @@ export default function Navbar({ dark, setDark }) {
         <ul className="hidden md:flex items-center gap-8 text-sm font-medium">
           {links.map((l) => (
             <li key={l.href}>
-              <a href={l.href} className="hover:text-violet-500 transition">
+              <a href={l.href} className="hover:text-maroon-500 transition">
                 {l.label}
               </a>
             </li>
@@ -55,7 +55,7 @@ export default function Navbar({ dark, setDark }) {
               <a
                 href={l.href}
                 onClick={() => setOpen(false)}
-                className="block py-2 hover:text-violet-500 transition"
+                className="block py-2 hover:text-maroon-500 transition"
               >
                 {l.label}
               </a>

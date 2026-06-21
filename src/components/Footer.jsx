@@ -7,7 +7,7 @@ export default function Footer() {
         <p>
           © {new Date().getFullYear()} {profile.name}. Built with ❤️ & React.
         </p>
-        <a href="#home" className="hover:text-violet-500 transition">
+        <a href="#home" className="hover:text-maroon-500 transition">
           Back to top ↑
         </a>
       </div>

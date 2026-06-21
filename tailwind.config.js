@@ -9,8 +9,17 @@ export default {
     extend: {
       colors: {
         accent: {
-          DEFAULT: '#6d28d9',
-          light: '#8b5cf6',
+          DEFAULT: '#7f1d1d',
+          light: '#991b1b',
+        },
+        maroon: {
+          50: '#fdf2f2',
+          100: '#fbe4e4',
+          300: '#c97a7a',
+          500: '#7f1d1d',
+          600: '#6b1717',
+          700: '#561212',
+          900: '#3a0d0d',
         },
       },
       fontFamily: {

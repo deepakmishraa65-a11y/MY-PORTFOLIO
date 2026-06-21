@@ -13,7 +13,7 @@ export default function About() {
         <h2 className="font-display text-3xl md:text-4xl font-bold text-center">
           {about.heading}
         </h2>
-        <div className="mx-auto mt-4 h-1 w-20 rounded-full bg-gradient-to-r from-violet-500 to-pink-500" />
+        <div className="mx-auto mt-4 h-1 w-20 rounded-full bg-gradient-to-r from-maroon-500 to-slate-400" />
 
         <div className="mt-12 grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-5 text-lg text-slate-600 dark:text-slate-400">
