@@ -44,6 +44,12 @@ export const skills = [
 // Projects — image: किसी भी image URL या /public में रखी image का path दें
 export const projects = [
   {
+    title: 'HireAI — Smart Hiring Platform',
+    category: 'AI / Web App',
+    image: 'https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&q=80',
+    link: '#', // यहाँ अपना HireAI project का live link या GitHub repo डालें
+  },
+  {
     title: 'Brand Identity — Lumen',
     category: 'Branding',
     image: 'https://images.unsplash.com/photo-1626785774573-4b799315345d?w=800&q=80',
