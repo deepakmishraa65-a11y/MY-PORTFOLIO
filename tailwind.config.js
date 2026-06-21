@@ -35,9 +35,9 @@ export default {
         display: ['"Space Grotesk"', 'sans-serif'],
       },
       boxShadow: {
-        glow: '0 0 40px -10px rgba(139, 92, 246, 0.45)',
-        'glow-cyan': '0 0 40px -10px rgba(34, 211, 238, 0.4)',
-        'glow-lg': '0 0 80px -20px rgba(59, 130, 246, 0.5)',
+        glow: '0 0 40px -10px rgb(var(--c1-rgb) / 0.45)',
+        'glow-cyan': '0 0 40px -10px rgb(var(--c3-rgb) / 0.4)',
+        'glow-lg': '0 0 80px -20px rgb(var(--c2-rgb) / 0.5)',
       },
       backdropBlur: {
         xs: '2px',

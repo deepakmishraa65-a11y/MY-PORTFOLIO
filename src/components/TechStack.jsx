@@ -36,7 +36,7 @@ export default function TechStack() {
               {items.map((item) => (
                 <span
                   key={item}
-                  className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium text-slate-300 hover:border-cosmic-400/50 hover:text-cosmic-300 transition"
+                  className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium text-slate-300 hover:border-[rgb(var(--c1-rgb)/0.50)] hover:text-[rgb(var(--c1-rgb))] transition"
                 >
                   {item}
                 </span>

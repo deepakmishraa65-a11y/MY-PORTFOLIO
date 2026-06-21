@@ -18,7 +18,7 @@ export default function About() {
             {about.paragraphs.map((p, i) => (
               <p key={i}>{p}</p>
             ))}
-            <p className="glass-card px-5 py-4 italic text-cosmic-300 border-l-2 border-cosmic-400">
+            <p className="glass-card px-5 py-4 italic text-[rgb(var(--c1-rgb))] border-l-2 border-[rgb(var(--c1-rgb))]">
               "{about.philosophy}"
             </p>
           </div>

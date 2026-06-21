@@ -17,7 +17,7 @@ export default function CursorGlow() {
   return (
     <div
       ref={ref}
-      className="pointer-events-none fixed top-0 left-0 -z-10 h-[400px] w-[400px] rounded-full bg-cosmic-500/10 blur-[100px] transition-transform duration-300 ease-out hidden md:block"
+      className="pointer-events-none fixed top-0 left-0 -z-10 h-[400px] w-[400px] rounded-full bg-[rgb(var(--c1-rgb)/0.10)] blur-[100px] transition-transform duration-300 ease-out hidden md:block"
     />
   )
 }

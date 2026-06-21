@@ -36,7 +36,7 @@ export default function Contact() {
             placeholder="Your Name"
             value={form.name}
             onChange={(e) => setForm({ ...form, name: e.target.value })}
-            className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-white placeholder:text-slate-500 outline-none focus:border-cosmic-400/60 transition"
+            className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-white placeholder:text-slate-500 outline-none focus:border-[rgb(var(--c1-rgb)/0.60)] transition"
           />
           <input
             required
@@ -44,7 +44,7 @@ export default function Contact() {
             placeholder="Your Email"
             value={form.email}
             onChange={(e) => setForm({ ...form, email: e.target.value })}
-            className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-white placeholder:text-slate-500 outline-none focus:border-cosmic-400/60 transition"
+            className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-white placeholder:text-slate-500 outline-none focus:border-[rgb(var(--c1-rgb)/0.60)] transition"
           />
           <textarea
             required
@@ -52,7 +52,7 @@ export default function Contact() {
             placeholder="Tell me about your project..."
             value={form.message}
             onChange={(e) => setForm({ ...form, message: e.target.value })}
-            className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-white placeholder:text-slate-500 outline-none focus:border-cosmic-400/60 transition resize-none"
+            className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-white placeholder:text-slate-500 outline-none focus:border-[rgb(var(--c1-rgb)/0.60)] transition resize-none"
           />
           <button type="submit" className="btn-primary w-full justify-center">
             Send Message →
@@ -66,7 +66,7 @@ export default function Contact() {
               href={url}
               target="_blank"
               rel="noreferrer"
-              className="rounded-full border border-white/10 px-5 py-2 capitalize text-slate-300 hover:border-cosmic-400/60 hover:text-cosmic-300 transition"
+              className="rounded-full border border-white/10 px-5 py-2 capitalize text-slate-300 hover:border-[rgb(var(--c1-rgb)/0.60)] hover:text-[rgb(var(--c1-rgb))] transition"
             >
               {name}
             </a>

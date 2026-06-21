@@ -19,7 +19,7 @@ export default function Testimonials() {
             transition={{ duration: 0.5, delay: i * 0.1 }}
             className="glass-card glow-border p-6 flex flex-col"
           >
-            <span className="text-3xl text-cosmic-400/60">"</span>
+            <span className="text-3xl text-[rgb(var(--c1-rgb)/0.60)]">"</span>
             <p className="mt-2 text-slate-300 flex-1">{t.quote}</p>
             <div className="mt-5 pt-4 border-t border-white/10">
               <p className="font-semibold text-white text-sm">{t.name}</p>

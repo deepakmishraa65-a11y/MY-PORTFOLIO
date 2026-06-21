@@ -6,6 +6,7 @@ import Hero from './components/Hero'
 import Marquee from './components/Marquee'
 import About from './components/About'
 import TechStack from './components/TechStack'
+import ColorPicker from './components/ColorPicker'
 import Services from './components/Services'
 import Projects from './components/Projects'
 import Experience from './components/Experience'
@@ -47,9 +48,9 @@ export default function App() {
 
       {/* Animated gradient blobs */}
       <div className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
-        <div className="absolute -top-40 left-1/4 h-96 w-96 rounded-full bg-electric-500/15 blur-3xl animate-blob" />
-        <div className="absolute top-1/2 -right-20 h-96 w-96 rounded-full bg-cosmic-500/15 blur-3xl animate-blob [animation-delay:4s]" />
-        <div className="absolute bottom-0 left-1/3 h-96 w-96 rounded-full bg-glow-cyan/10 blur-3xl animate-blob [animation-delay:8s]" />
+        <div className="absolute -top-40 left-1/4 h-96 w-96 rounded-full bg-[rgb(var(--c2-rgb)/0.15)] blur-3xl animate-blob" />
+        <div className="absolute top-1/2 -right-20 h-96 w-96 rounded-full bg-[rgb(var(--c1-rgb)/0.15)] blur-3xl animate-blob [animation-delay:4s]" />
+        <div className="absolute bottom-0 left-1/3 h-96 w-96 rounded-full bg-[rgb(var(--c3-rgb)/0.10)] blur-3xl animate-blob [animation-delay:8s]" />
       </div>
 
       <CursorGlow />
@@ -60,6 +61,7 @@ export default function App() {
         <Marquee />
         <About />
         <TechStack />
+        <ColorPicker />
         <Services />
         <Projects />
         <Experience />

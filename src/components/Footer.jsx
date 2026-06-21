@@ -7,7 +7,7 @@ export default function Footer() {
         <p>
           © {new Date().getFullYear()} {profile.name}. Built with ❤️ & AI.
         </p>
-        <a href="#home" className="hover:text-cosmic-300 transition">
+        <a href="#home" className="hover:text-[rgb(var(--c1-rgb))] transition">
           Back to top ↑
         </a>
       </div>

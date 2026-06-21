@@ -27,7 +27,7 @@ export default function Projects() {
                 className="h-full w-full object-cover transition duration-500 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-space via-space/20 to-transparent" />
-              <span className="absolute top-3 right-3 rounded-full bg-space/80 border border-white/10 px-3 py-1 text-xs font-medium text-cosmic-300 backdrop-blur-sm">
+              <span className="absolute top-3 right-3 rounded-full bg-space/80 border border-white/10 px-3 py-1 text-xs font-medium text-[rgb(var(--c1-rgb))] backdrop-blur-sm">
                 {p.category}
               </span>
             </div>
@@ -63,7 +63,7 @@ export default function Projects() {
                   href={p.demoUrl}
                   target={p.demoUrl !== '#' ? '_blank' : undefined}
                   rel="noreferrer"
-                  className="flex-1 text-center rounded-full bg-gradient-to-r from-electric-500 to-cosmic-500 px-4 py-2 text-sm font-medium text-white hover:shadow-glow transition"
+                  className="flex-1 text-center rounded-full bg-gradient-to-r from-[rgb(var(--c2-rgb))] to-[rgb(var(--c1-rgb))] px-4 py-2 text-sm font-medium text-white hover:shadow-glow transition"
                 >
                   Live Demo
                 </a>
@@ -71,7 +71,7 @@ export default function Projects() {
                   href={p.githubUrl}
                   target={p.githubUrl !== '#' ? '_blank' : undefined}
                   rel="noreferrer"
-                  className="flex-1 text-center rounded-full border border-white/15 px-4 py-2 text-sm font-medium text-slate-200 hover:border-cosmic-400/60 hover:text-cosmic-300 transition"
+                  className="flex-1 text-center rounded-full border border-white/15 px-4 py-2 text-sm font-medium text-slate-200 hover:border-[rgb(var(--c1-rgb)/0.60)] hover:text-[rgb(var(--c1-rgb))] transition"
                 >
                   GitHub
                 </a>
