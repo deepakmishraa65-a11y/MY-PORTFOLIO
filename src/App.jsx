@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react'
 import Navbar from './components/Navbar'
+import ScrollProgress from './components/ScrollProgress'
 import Hero from './components/Hero'
+import Marquee from './components/Marquee'
 import About from './components/About'
 import Services from './components/Services'
 import Skills from './components/Skills'
@@ -24,15 +26,18 @@ export default function App() {
 
   return (
     <div className="relative overflow-x-hidden">
-      {/* Background glow */}
-      <div className="pointer-events-none fixed inset-0 -z-10">
-        <div className="absolute -top-40 left-1/4 h-96 w-96 rounded-full bg-violet-500/20 blur-3xl" />
-        <div className="absolute top-1/2 -right-20 h-96 w-96 rounded-full bg-fuchsia-500/20 blur-3xl" />
+      {/* Animated background blobs */}
+      <div className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
+        <div className="absolute -top-40 left-1/4 h-96 w-96 rounded-full bg-violet-500/20 blur-3xl animate-blob" />
+        <div className="absolute top-1/2 -right-20 h-96 w-96 rounded-full bg-fuchsia-500/20 blur-3xl animate-blob [animation-delay:4s]" />
+        <div className="absolute bottom-0 left-1/3 h-96 w-96 rounded-full bg-pink-500/15 blur-3xl animate-blob [animation-delay:8s]" />
       </div>
 
+      <ScrollProgress />
       <Navbar dark={dark} setDark={setDark} />
       <main>
         <Hero />
+        <Marquee />
         <About />
         <Services />
         <Skills />

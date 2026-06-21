@@ -1,5 +1,8 @@
 import { motion } from 'framer-motion'
 import { profile } from '../data'
+import TypewriterText from './TypewriterText'
+
+const roles = ['Designer', 'Creative Thinker', 'UI/UX Artist', 'Brand Builder', 'AI Creator']
 
 export default function Hero() {
   return (
@@ -18,7 +21,8 @@ export default function Hero() {
             Hi, I'm <span className="gradient-text">{profile.name}</span>
           </h1>
           <h2 className="mt-3 text-2xl md:text-3xl font-semibold text-slate-600 dark:text-slate-400">
-            {profile.role}
+            I'm a{' '}
+            <TypewriterText words={roles} className="gradient-text font-bold" />
           </h2>
           <p className="mt-6 text-lg text-slate-600 dark:text-slate-400 max-w-md">
             {profile.tagline}
@@ -36,10 +40,18 @@ export default function Hero() {
           className="relative flex justify-center"
         >
           <div className="relative h-72 w-72 md:h-96 md:w-96 animate-float">
-            <div className="absolute inset-0 rounded-[2.5rem] bg-gradient-to-br from-violet-500 via-fuchsia-500 to-pink-500 rotate-6" />
+            {/* rotating dashed ring */}
+            <div className="absolute -inset-6 rounded-full border-2 border-dashed border-violet-400/40 animate-spin-slow" />
+            <div className="absolute inset-0 rounded-[2.5rem] bg-gradient-to-br from-violet-500 via-fuchsia-500 to-pink-500 rotate-6 animate-gradient bg-[length:200%_200%]" />
             <div className="absolute inset-0 rounded-[2.5rem] bg-gradient-to-br from-violet-600 to-pink-600 -rotate-6 opacity-60 blur-sm" />
             <div className="absolute inset-2 rounded-[2.2rem] bg-white/10 backdrop-blur-sm flex items-center justify-center text-8xl">
               🎨
+            </div>
+            {/* orbiting badges */}
+            <div className="absolute inset-0 animate-spin-slow">
+              <span className="absolute -top-4 left-1/2 -translate-x-1/2 text-2xl">✨</span>
+              <span className="absolute top-1/2 -right-4 -translate-y-1/2 text-2xl">🖌️</span>
+              <span className="absolute -bottom-4 left-1/2 -translate-x-1/2 text-2xl">💡</span>
             </div>
           </div>
         </motion.div>
