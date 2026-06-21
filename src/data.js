@@ -120,10 +120,10 @@ export const experience = [
     desc: 'Designing and building AI-native products end-to-end, from model integration to UI.',
   },
   {
-    year: '2023 — 2024',
-    title: 'Full Stack Developer',
-    org: 'Freelance / Client Projects',
-    desc: 'Delivered full stack web applications and enterprise tools, including the Textile ERP system.',
+    year: '2023 — 2024 (1 Year)', // ⬅️ duration yahan edit karo
+    title: 'Software Developer', // ⬅️ apna actual job title yahan likho
+    org: 'Bhaskar Silkmills', // ⬅️ company ka naam
+    desc: 'Designed and built the Textile ERP system — streamlining inventory, production tracking, and billing for the company.', // ⬅️ apna real role/kaam yahan likho
   },
   {
     year: '2022 — 2023',
